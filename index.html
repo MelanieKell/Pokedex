@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body onload="renderPokedex()" >
+    
+
+    <div  class="pokemon-overview">
+        <div class="pokeball">
+            <img class="pokeball-img" src="img/pokemon-ball.png">
+        </div>
+
+        <div id="pokemon-container"></div>
+
+
+
+    </div>
+
+ 
+    <!-- single view pokemon card -->
+
+    <div style="display:none;" class="single-view">
+        <video autoplay muted loop id="background-video">
+            <source src="img/firework.mp4" type="video/mp4">
+        </video>
+
+        <div id="pokedex">
+            
+
+            <div class="header">
+                <h1 id="pokemonName"> </h1>
+                <a href="#" class="back"> x </a>
+            
+            <div id="skills">
+            </div>  
+        </div>
+
+
+        </div>
+
+        <div class="info-container">
+            <img id="pokemonImg">
+
+
+            <div class="tab">
+                <div> <button class="tab-links" onclick="handleTabClick('about')">about</button></div>
+                <div> <button class="tab-links" onclick="handleTabClick('stats')">stats</button></div>
+                <div> <button class="tab-links" onclick="handleTabClick('moves')">some moves</button></div>
+            </div>
+
+            <div id="pokemon-about" class="pokemon-info">
+                <div>
+                    <div class="discription">
+                        <h2>experience:</h2>
+                        <p id="charmander-experience"> </p>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="discription">
+                        <h2>height:</h2>
+                        <p id="charmander-height"> </p>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="discription">
+                        <h2>weight:</h2>
+                        <p id="charmander-weight"> </p>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="discription">
+                        <h2>abilities:</h2>
+                        <p id="charmander-abilities"> </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!--pokemon stats hidden until clicked -->
+
+            <div id="pokemon-stats" style="display:none;" class="pokemon-info">
+
+                <div class="discription">
+                    <h2>hp:</h2>
+                    <p id="charmander-hp"> </p>
+                </div>
+
+
+                <div class="discription">
+                    <h2>attack:</h2>
+                    <p id="charmander-attack"> </p>
+                </div>
+
+
+                <div class="discription">
+                    <h2>defense:</h2>
+                    <p id="charmander-defense"> </p>
+                </div>
+
+
+                <div class="discription">
+                    <h2>speed:</h2>
+                    <p id="charmander-speed"> </p>
+                </div>
+
+            </div>
+            <!-- pokemon some moves hidden until clicked ked -->
+
+            <div id="pokemon-moves" style="display:none;" class="pokemon-info">
+
+                <div class="discription">
+                    <h2>move:</h2>
+                    <p id="charmander-move-1"> </p>
+                </div>
+
+
+                <div class="discription">
+                    <h2>move:</h2>
+                    <p id="charmander-move-2"> </p>
+                </div>
+
+
+                <div class="discription">
+                    <h2>move:</h2>
+                    <p id="charmander-move-3"> </p>
+                </div>
+
+
+                <div class="discription">
+                    <h2>move:</h2>
+                    <p id="charmander-move-4"> </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
